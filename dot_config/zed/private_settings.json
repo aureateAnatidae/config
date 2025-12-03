@@ -1,0 +1,91 @@
+{
+	"features": {
+		"edit_prediction_provider": "none"
+	},
+	"ensure_final_newline_on_save": false,
+	"remove_trailing_whitespace_on_save": false,
+	"buffer_font_family": "JuliaMono",
+	"buffer_font_weight": 100,
+	"ui_font_size": 16,
+	"buffer_font_size": 16,
+	"hard_tabs": false,
+	"tab_size": 4,
+	"theme": {
+		"mode": "dark",
+		"light": "One Light",
+		"dark": "Catppuccin Frappé"
+	},
+	"use_autoclose": false,
+	"use_on_type_format": false,
+	"format_on_save": "off",
+	"hide_mouse": "never",
+	"disable_ai": true,
+
+	"languages": {
+		"C": {
+			"show_edit_predictions": false
+		},
+		"Python": {
+			"language_servers": ["ruff", "pylsp"],
+			"format_on_save": "off",
+			"show_completions_on_input": false,
+			"formatter": [
+				{
+					"code_action": "source.organizeImports.ruff"
+				},
+				{
+					"language_server": {
+						"name": "ruff"
+					}
+				}
+			]
+		},
+		"Kotlin": {
+			"format_on_save": "off"
+		},
+		"Java": {
+			"format_on_save": "off"
+		},
+		"XML": {
+			"format_on_save": "off"
+		},
+		"Markdown": {
+			"show_completions_on_input": false,
+			"enable_language_server": false
+		},
+
+		"JavaScript": {
+			"language_servers": ["biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+
+		"TypeScript": {
+			"language_servers": ["biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"Svelte": {
+			"language_servers": ["biome", "svelte-language-server"]
+		},
+
+		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"JSON": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"format_on_save": "off"
+		},
+
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"GraphQL": { "formatter": { "language_server": { "name": "biome" } } }
+	}
+}

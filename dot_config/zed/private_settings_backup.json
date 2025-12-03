@@ -1,0 +1,173 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+	"ssh_connections": [
+		{
+			"host": "helios",
+			"username": "auan",
+			"port": 22,
+			"args": ["-i", "/home/auAn/.ssh/helios"],
+			"projects": [
+				{
+					"paths": ["/home/auan"]
+				},
+				{
+					"paths": ["/home/auan/containers/imbot"]
+				},
+				{
+					"paths": ["~/containers"]
+				},
+				{
+					"paths": ["~/containers/natPortal"]
+				}
+			]
+		},
+		{
+			"host": "_helios",
+			"projects": [
+				{
+					"paths": ["~/containers"]
+				}
+			]
+		},
+		{
+			"host": "hypothalamus",
+			"username": "eric",
+			"projects": [
+				{
+					"paths": ["/etc/nginx/conf.d"]
+				},
+				{
+					"paths": ["~/moodle.neuralberta.tech"]
+				},
+				{
+					"paths": ["~/natPortal_schema.sql"]
+				}
+			]
+		},
+		{
+			"host": "npt_test",
+			"projects": [
+				{
+					"paths": ["~/natPortal"]
+				},
+				{
+					"paths": ["~/starter-for-svelte"]
+				}
+			]
+		},
+		{
+			"host": "npa_test",
+			"projects": [
+				{
+					"paths": ["/home/eric"]
+				}
+			]
+		}
+	],
+	"features": {
+		"edit_prediction_provider": "none"
+	},
+	"ensure_final_newline_on_save": false,
+	"remove_trailing_whitespace_on_save": false,
+	"buffer_font_family": "JuliaMono",
+	"buffer_font_weight": 100,
+	"ui_font_size": 16,
+	"buffer_font_size": 16,
+	"hard_tabs": false,
+	"tab_size": 4,
+	"theme": {
+		"mode": "dark",
+		"light": "One Light",
+		"dark": "Catppuccin Frappé"
+	},
+	"use_autoclose": false,
+	"use_on_type_format": false,
+	"format_on_save": "off",
+	"hide_mouse": "never",
+	"disable_ai": true,
+
+	"language_servers": ["!eslint", "..."],
+
+	"languages": {
+		"C": {
+			"show_edit_predictions": false
+		},
+		"Python": {
+			"language_servers": ["ruff", "pylsp"],
+			"format_on_save": "off",
+			"show_completions_on_input": false,
+			"formatter": [
+				{ "code_actions": { "source.organizeImports.ruff": true } },
+				{ "language_server": { "name": "ruff" } }
+			]
+			// "show_completion_documentation": true
+		},
+		"Kotlin": {
+			"format_on_save": "off"
+		},
+		"Java": {
+			"format_on_save": "off"
+		},
+		"XML": {
+			"format_on_save": "off"
+		},
+		"Markdown": {
+			"show_completions_on_input": false,
+			"enable_language_server": false
+		},
+
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+
+		"TypeScript": {
+			"language_servers": ["biome"],
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"Svelte": {
+			"language_servers": ["biome", "svelte-language-server"]
+		},
+
+		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"JSON": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"format_on_save": "off"
+		},
+
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
+
+		"GraphQL": { "formatter": { "language_server": { "name": "biome" } } }
+	},
+
+	"lsp": {
+		"biome": {
+			"settings": {
+				"config_path": "frontend/biome.json"
+			}
+		}
+	}
+
+	// "formatter": {
+	// 	"language_server": {
+	// 		"name": "biome"
+	// 	}
+	// }
+}
